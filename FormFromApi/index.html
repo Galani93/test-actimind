@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Window with Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <h1>Modal Window Demo</h1>
+    <button
+            class="btn-primary open-modal-button"
+            onclick="openModal()"
+    >
+        <i class="fas fa-external-link-alt"></i>
+        Open Modal Window
+    </button>
+</div>
+
+<div
+        id="cardsModal"
+        class="modal"
+>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Data Loading</h2>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div id="cards-container" class="cards-container"></div>
+            <button class="btn-load" onclick="loadCards()">
+                <i class="fas fa-download"></i>
+                Load Cards
+            </button>
+        </div>
+    </div>
+</div>
+<div id="modal-alert" class="modal-alert"></div>
+<script src="script.js"></script>
+</body>
+
+</html>
